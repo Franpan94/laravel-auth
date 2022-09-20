@@ -17,10 +17,15 @@
           <tbody>
             <tr>
               <th scope="row">{{ $post->id }}</th>
-              <td><a href="{{ route('admin.posts.show'), $post->id }}">{{ $post->title }}</a></td>
+              <td><a href="{{ route('admin.posts.show', $post->id) }}">{{ $post->title }}</a></td>
               <td>{{ $post->author }}</td>
               <td>
-
+                <div class="d-inline">
+                  <button class="btn btn-success"><a href="" class="text-monospace">Modifica</a></button>
+                </div>
+                <form action="" class="d-inline">
+                  <button class="btn btn-danger"><a href="" class="text-monospace">Elimina</a></button>
+                </form>
               </td>
             </tr>
           </tbody>
