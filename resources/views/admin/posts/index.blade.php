@@ -23,8 +23,10 @@
                 <div class="d-inline">
                   <button class="btn btn-success"><a href="" class="text-monospace">Modifica</a></button>
                 </div>
-                <form action="" class="d-inline">
-                  <button class="btn btn-danger"><a href="" class="text-monospace">Elimina</a></button>
+                <form action="{{ route('admin.posts.destroy', $post->id) }}" method="POST" class="d-inline">
+                  <button class="btn btn-danger text-monospace">Elimina</button>
+                  @csrf
+                  @method('DELETE')
                 </form>
               </td>
             </tr>
